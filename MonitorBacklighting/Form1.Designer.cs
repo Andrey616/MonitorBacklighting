@@ -31,7 +31,7 @@
             this.PortBox = new System.Windows.Forms.ComboBox();
             this.butOpen = new System.Windows.Forms.Button();
             this.butClose = new System.Windows.Forms.Button();
-            this.OnOofTape = new System.Windows.Forms.CheckBox();
+            this.OnOffTape = new System.Windows.Forms.CheckBox();
             this.Futor = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.trackBarRed = new System.Windows.Forms.TrackBar();
@@ -67,7 +67,7 @@
             this.ColorWhiteOrange = new System.Windows.Forms.RadioButton();
             this.ColorBlue = new System.Windows.Forms.RadioButton();
             this.ColorOrange = new System.Windows.Forms.RadioButton();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxColor = new System.Windows.Forms.CheckBox();
             this.labelBrightness = new System.Windows.Forms.Label();
             this.trackBrightness = new System.Windows.Forms.TrackBar();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
@@ -108,7 +108,7 @@
             this.butOpen.Location = new System.Drawing.Point(141, 20);
             this.butOpen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.butOpen.Name = "butOpen";
-            this.butOpen.Size = new System.Drawing.Size(74, 26);
+            this.butOpen.Size = new System.Drawing.Size(74, 21);
             this.butOpen.TabIndex = 1;
             this.butOpen.Text = "Открыть";
             this.butOpen.UseVisualStyleBackColor = false;
@@ -122,24 +122,24 @@
             this.butClose.Location = new System.Drawing.Point(221, 20);
             this.butClose.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.butClose.Name = "butClose";
-            this.butClose.Size = new System.Drawing.Size(74, 26);
+            this.butClose.Size = new System.Drawing.Size(74, 21);
             this.butClose.TabIndex = 2;
             this.butClose.Text = "Закрыть";
             this.butClose.UseVisualStyleBackColor = false;
             this.butClose.Click += new System.EventHandler(this.butClose_Click);
             // 
-            // OnOofTape
+            // OnOffTape
             // 
-            this.OnOofTape.AutoSize = true;
-            this.OnOofTape.ForeColor = System.Drawing.Color.White;
-            this.OnOofTape.Location = new System.Drawing.Point(15, 49);
-            this.OnOofTape.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.OnOofTape.Name = "OnOofTape";
-            this.OnOofTape.Size = new System.Drawing.Size(168, 17);
-            this.OnOofTape.TabIndex = 4;
-            this.OnOofTape.Text = "Включить\\Выключить ленту";
-            this.OnOofTape.UseVisualStyleBackColor = true;
-            this.OnOofTape.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.OnOffTape.AutoSize = true;
+            this.OnOffTape.ForeColor = System.Drawing.Color.White;
+            this.OnOffTape.Location = new System.Drawing.Point(15, 49);
+            this.OnOffTape.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.OnOffTape.Name = "OnOffTape";
+            this.OnOffTape.Size = new System.Drawing.Size(168, 17);
+            this.OnOffTape.TabIndex = 4;
+            this.OnOffTape.Text = "Включить\\Выключить ленту";
+            this.OnOffTape.UseVisualStyleBackColor = true;
+            this.OnOffTape.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Futor
             // 
@@ -320,7 +320,7 @@
             this.Mode3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Mode3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mode3.ForeColor = System.Drawing.Color.White;
-            this.Mode3.Location = new System.Drawing.Point(12, 88);
+            this.Mode3.Location = new System.Drawing.Point(12, 84);
             this.Mode3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Mode3.Name = "Mode3";
             this.Mode3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -337,7 +337,7 @@
             this.Mode4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Mode4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Mode4.ForeColor = System.Drawing.Color.White;
-            this.Mode4.Location = new System.Drawing.Point(12, 117);
+            this.Mode4.Location = new System.Drawing.Point(12, 113);
             this.Mode4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Mode4.Name = "Mode4";
             this.Mode4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -390,7 +390,7 @@
             this.SpeedModeLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.SpeedModeLable.Size = new System.Drawing.Size(163, 19);
             this.SpeedModeLable.TabIndex = 25;
-            this.SpeedModeLable.Text = "Скорость режимов: 4";
+            this.SpeedModeLable.Text = "Скорость режима: 100";
             this.SpeedModeLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.SpeedModeLable.UseWaitCursor = true;
             this.SpeedModeLable.Click += new System.EventHandler(this.SpeedModeLable_Click);
@@ -426,6 +426,7 @@
             this.ColorRed.TabIndex = 27;
             this.ColorRed.TabStop = true;
             this.ColorRed.UseVisualStyleBackColor = false;
+            this.ColorRed.CheckedChanged += new System.EventHandler(this.ColorRed_CheckedChanged);
             // 
             // ColorCyan
             // 
@@ -438,6 +439,7 @@
             this.ColorCyan.Size = new System.Drawing.Size(22, 20);
             this.ColorCyan.TabIndex = 28;
             this.ColorCyan.UseVisualStyleBackColor = false;
+            this.ColorCyan.CheckedChanged += new System.EventHandler(this.ColorCyan_CheckedChanged);
             // 
             // ColorLime
             // 
@@ -450,6 +452,7 @@
             this.ColorLime.Size = new System.Drawing.Size(22, 20);
             this.ColorLime.TabIndex = 29;
             this.ColorLime.UseVisualStyleBackColor = false;
+            this.ColorLime.CheckedChanged += new System.EventHandler(this.ColorLime_CheckedChanged);
             // 
             // ColorMagenta
             // 
@@ -463,6 +466,7 @@
             this.ColorMagenta.Size = new System.Drawing.Size(22, 20);
             this.ColorMagenta.TabIndex = 30;
             this.ColorMagenta.UseVisualStyleBackColor = false;
+            this.ColorMagenta.CheckedChanged += new System.EventHandler(this.ColorMagenta_CheckedChanged);
             // 
             // ColorYellow
             // 
@@ -475,6 +479,7 @@
             this.ColorYellow.Size = new System.Drawing.Size(22, 20);
             this.ColorYellow.TabIndex = 31;
             this.ColorYellow.UseVisualStyleBackColor = false;
+            this.ColorYellow.CheckedChanged += new System.EventHandler(this.ColorYellow_CheckedChanged);
             // 
             // ColorDarkPink
             // 
@@ -487,6 +492,7 @@
             this.ColorDarkPink.Size = new System.Drawing.Size(22, 20);
             this.ColorDarkPink.TabIndex = 32;
             this.ColorDarkPink.UseVisualStyleBackColor = false;
+            this.ColorDarkPink.CheckedChanged += new System.EventHandler(this.ColorDarkPink_CheckedChanged);
             // 
             // ColorDarkCany
             // 
@@ -499,6 +505,7 @@
             this.ColorDarkCany.Size = new System.Drawing.Size(22, 20);
             this.ColorDarkCany.TabIndex = 33;
             this.ColorDarkCany.UseVisualStyleBackColor = false;
+            this.ColorDarkCany.CheckedChanged += new System.EventHandler(this.ColorDarkCany_CheckedChanged);
             // 
             // ColorDarkMagenta
             // 
@@ -511,6 +518,7 @@
             this.ColorDarkMagenta.Size = new System.Drawing.Size(22, 20);
             this.ColorDarkMagenta.TabIndex = 34;
             this.ColorDarkMagenta.UseVisualStyleBackColor = false;
+            this.ColorDarkMagenta.CheckedChanged += new System.EventHandler(this.ColorDarkMagenta_CheckedChanged);
             // 
             // ColorWhite
             // 
@@ -523,6 +531,7 @@
             this.ColorWhite.Size = new System.Drawing.Size(22, 20);
             this.ColorWhite.TabIndex = 35;
             this.ColorWhite.UseVisualStyleBackColor = false;
+            this.ColorWhite.CheckedChanged += new System.EventHandler(this.ColorWhite_CheckedChanged);
             // 
             // ColorSwamp
             // 
@@ -535,6 +544,7 @@
             this.ColorSwamp.Size = new System.Drawing.Size(22, 20);
             this.ColorSwamp.TabIndex = 36;
             this.ColorSwamp.UseVisualStyleBackColor = false;
+            this.ColorSwamp.CheckedChanged += new System.EventHandler(this.ColorSwamp_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -557,7 +567,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.groupBox2.Size = new System.Drawing.Size(190, 75);
+            this.groupBox2.Size = new System.Drawing.Size(198, 78);
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Готовые цвета";
@@ -573,6 +583,7 @@
             this.ColorPalePink.Size = new System.Drawing.Size(22, 20);
             this.ColorPalePink.TabIndex = 40;
             this.ColorPalePink.UseVisualStyleBackColor = false;
+            this.ColorPalePink.CheckedChanged += new System.EventHandler(this.ColorPalePink_CheckedChanged);
             // 
             // ColorWhiteOrange
             // 
@@ -585,6 +596,7 @@
             this.ColorWhiteOrange.Size = new System.Drawing.Size(22, 20);
             this.ColorWhiteOrange.TabIndex = 39;
             this.ColorWhiteOrange.UseVisualStyleBackColor = false;
+            this.ColorWhiteOrange.CheckedChanged += new System.EventHandler(this.ColorWhiteOrange_CheckedChanged);
             // 
             // ColorBlue
             // 
@@ -597,6 +609,7 @@
             this.ColorBlue.Size = new System.Drawing.Size(22, 20);
             this.ColorBlue.TabIndex = 38;
             this.ColorBlue.UseVisualStyleBackColor = false;
+            this.ColorBlue.CheckedChanged += new System.EventHandler(this.ColorBlue_CheckedChanged);
             // 
             // ColorOrange
             // 
@@ -609,21 +622,22 @@
             this.ColorOrange.Size = new System.Drawing.Size(22, 20);
             this.ColorOrange.TabIndex = 37;
             this.ColorOrange.UseVisualStyleBackColor = false;
+            this.ColorOrange.CheckedChanged += new System.EventHandler(this.ColorOrange_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxColor
             // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.ForeColor = System.Drawing.Color.White;
-            this.checkBox2.Location = new System.Drawing.Point(218, 221);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(143, 23);
-            this.checkBox2.TabIndex = 38;
-            this.checkBox2.Text = "Использовать свой цвет";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBoxColor.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxColor.AutoSize = true;
+            this.checkBoxColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.checkBoxColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxColor.ForeColor = System.Drawing.Color.White;
+            this.checkBoxColor.Location = new System.Drawing.Point(218, 221);
+            this.checkBoxColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.checkBoxColor.Name = "checkBoxColor";
+            this.checkBoxColor.Size = new System.Drawing.Size(143, 23);
+            this.checkBoxColor.TabIndex = 38;
+            this.checkBoxColor.Text = "Использовать свой цвет";
+            this.checkBoxColor.UseVisualStyleBackColor = false;
             // 
             // labelBrightness
             // 
@@ -636,7 +650,7 @@
             this.labelBrightness.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelBrightness.Size = new System.Drawing.Size(174, 21);
             this.labelBrightness.TabIndex = 40;
-            this.labelBrightness.Text = "Яркость режимов: 5";
+            this.labelBrightness.Text = "Яркость режима: 5";
             this.labelBrightness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelBrightness.UseWaitCursor = true;
             // 
@@ -677,7 +691,7 @@
             this.Controls.Add(this.Push);
             this.Controls.Add(this.labelBrightness);
             this.Controls.Add(this.trackBrightness);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBoxColor);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SpeedModeLable);
@@ -693,7 +707,7 @@
             this.Controls.Add(this.trackBarGreen);
             this.Controls.Add(this.trackBarRed);
             this.Controls.Add(this.Futor);
-            this.Controls.Add(this.OnOofTape);
+            this.Controls.Add(this.OnOffTape);
             this.Controls.Add(this.butClose);
             this.Controls.Add(this.butOpen);
             this.Controls.Add(this.PortBox);
@@ -720,7 +734,7 @@
         private System.Windows.Forms.ComboBox PortBox;
         private System.Windows.Forms.Button butOpen;
         private System.Windows.Forms.Button butClose;
-        private System.Windows.Forms.CheckBox OnOofTape;
+        private System.Windows.Forms.CheckBox OnOffTape;
         private System.Windows.Forms.TextBox Futor;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TrackBar trackBarRed;
@@ -756,7 +770,7 @@
         private System.Windows.Forms.RadioButton ColorWhiteOrange;
         private System.Windows.Forms.RadioButton ColorBlue;
         private System.Windows.Forms.RadioButton ColorOrange;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxColor;
         private System.Windows.Forms.Label labelBrightness;
         private System.Windows.Forms.TrackBar trackBrightness;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;

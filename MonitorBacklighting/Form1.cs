@@ -29,6 +29,9 @@ namespace MonitorBacklighting
         public string portName;
         public SerialPort serialPort;
         int keyOpen = 0;
+        int mode = 0;
+        int colorPalette = 0;
+        int OnOff = 0;
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -96,13 +99,15 @@ namespace MonitorBacklighting
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (OnOofTape.Checked == true)
+            if (OnOffTape.Checked == true)
             {
                 Futor.Text = " Лента включена";
+                OnOff = 1;
             }
             else
             {
                 Futor.Text = " Лента выключена";
+                OnOff = 0;
             }
         }
 
@@ -148,32 +153,36 @@ namespace MonitorBacklighting
         private void groupBox1_Enter(object sender, EventArgs e)
         {
             
-
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             Futor.Text = "0";
+            mode = 0;
         }
 
         private void Mode1_CheckedChanged(object sender, EventArgs e)
         {
             Futor.Text = "1";
+            mode = 1;
         }
 
         private void Mode3_CheckedChanged(object sender, EventArgs e)
         {
             Futor.Text = "2";
+            mode = 2;
         }
 
         private void Mode4_CheckedChanged(object sender, EventArgs e)
         {
             Futor.Text = "3";
+            mode = 3;
         }
 
         private void Mode5_CheckedChanged(object sender, EventArgs e)
         {
             Futor.Text = "4";
+            mode = 4;
         }
 
         private void Сollapse_Click(object sender, EventArgs e)
@@ -198,10 +207,144 @@ namespace MonitorBacklighting
 
         private void Push_Click(object sender, EventArgs e)
         {
+            main();
+        }
+
+        private void main()
+        {
             if (keyOpen == 1)
             {
-                Futor.Text = "1|100|100";
+                //Futor.Text = "1|100|100";
+                /*
+                 |вкл\вкл ленты|мод|скорость|яркость|красный|зелёный|синий||||
+                 
+                 
+                 */
+                
+
+                switch (mode)
+                {
+                    case 0:
+                        Futor.Text = $"|{OnOff}|0|{trackSpeedMode.Value}|{trackBrightness.Value}|";
+
+                        break;
+
+                    case 1:
+                        Futor.Text = $"|{OnOff}|1|{trackSpeedMode.Value}|{trackBrightness.Value}|";
+
+                        break;
+
+                    case 2:
+                        if (checkBoxColor.Checked)
+                        {
+                            Futor.Text = $"|{OnOff}|2|{trackSpeedMode.Value}|{trackBrightness.Value}|{trackBarRed.Value}|{trackBarGreen.Value}|{trackBarBlue.Value}|";
+                        }
+                        else
+                        {
+                            Futor.Text = $"|{OnOff}|2|{trackSpeedMode.Value}|{trackBrightness.Value}|{ColorPaletteList[colorPalette]}|";
+                        }
+                        
+                        break;
+
+                    case 3:
+                        if (checkBoxColor.Checked)
+                        {
+                            Futor.Text = $"|{OnOff}|3|{trackSpeedMode.Value}|{trackBrightness.Value}|{trackBarRed.Value}|{trackBarGreen.Value}|{trackBarBlue.Value}|";
+                        }
+                        else
+                        {
+                            Futor.Text = $"|{OnOff}|3|{trackSpeedMode.Value}|{trackBrightness.Value}|{ColorPaletteList[colorPalette]}|";
+                        }
+
+                        break; 
+
+                    case 4:
+                        if (checkBoxColor.Checked)
+                        {
+                            Futor.Text = $"|{OnOff}|4|{trackSpeedMode.Value}|{trackBrightness.Value}|{trackBarRed.Value}|{trackBarGreen.Value}|{trackBarBlue.Value}|";
+                        }
+                        else
+                        {
+                            Futor.Text = $"|{OnOff}|4|{trackSpeedMode.Value}|{trackBrightness.Value}|{ColorPaletteList[colorPalette]}|";
+                        }
+
+                        break; 
+
+                }
             }
+        }
+
+
+        List<string> ColorPaletteList = new List<string>() { "255|0|0", "0|255|255", "0|255|0", "255|0|255", "255|255|0", "255|80|0", "0|0|255", "228|0|127", "46|167|224", "96|25|134", "255|255|255", "140|179|36", "255|156|51", "209|113|174" };
+
+        private void ColorRed_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 0;
+        }
+       
+        private void ColorCyan_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 1;
+        }
+
+        private void ColorLime_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 2;  
+        }
+
+        private void ColorMagenta_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 3;
+        }
+
+         private void ColorYellow_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 4;
+        }
+
+        private void ColorOrange_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 5;
+        }
+
+        private void ColorBlue_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 6;
+        }
+
+        private void ColorDarkPink_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 7;
+        }
+
+        private void ColorDarkCany_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 8;
+        }
+
+        private void ColorDarkMagenta_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 9;
+        }
+
+        private void ColorWhite_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 10;
+        }
+
+        private void ColorSwamp_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 11;
+        }
+
+        private void ColorWhiteOrange_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 12;
+        }
+
+        private void ColorPalePink_CheckedChanged(object sender, EventArgs e)
+        {
+            colorPalette = 13;
         }
     }
 }
