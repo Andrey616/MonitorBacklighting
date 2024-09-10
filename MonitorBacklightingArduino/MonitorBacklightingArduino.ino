@@ -8,8 +8,8 @@
 #define RELAY_IN 5
 
 CRGB leds[NUM_LEDS];
-int hell = 255;
-int speed = 15;
+int hell = 100;
+int speed = 50;
 
 int R = 255;
 int G = 0;
@@ -17,10 +17,11 @@ int B = 255;
 
 void setup() {
   // put your setup code here, to run once:
+  
   pinMode(RELAY_IN, OUTPUT);
   Serial.begin(9600);
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
-  FastLED.setBrightness(255);
+  //FastLED.setBrightness(255);
 
 }
 
@@ -77,17 +78,37 @@ void breath(){ // дыхание
 
 void paint_the_tape_in(){  // покарсить всё в один цыет
   for (int i = 0; i < NUM_LEDS; i++) {
-    leds[i] = CRGB(0xFF, 0x50, 0x00); 
+    leds[i] = CRGB(R, G, B); 
     FastLED.setBrightness(hell);
   }
   FastLED.show();
 }
 
 
-
 void fire() {
-  
+   
+  // Имитация горения огня
+  for (int i = 0; i < NUM_LEDS; i++) {
+    // Случайный выбор цвета от оранжевого до красного
+    int r = random(255, 255);
+    int g = random(0, 0);
+    int b = random(0, 128);
+    leds[i] = CRGB(r, g, b);
+  }
 
+  // Случайные изменения яркости светодиодов
+  for (int i = 0; i < NUM_LEDS; i++) {
+    int brightness = random(80, 150);
+    
+    leds[i].nscale8(brightness);
+  }
+
+  // Отображение обновленной ленты
+  FastLED.show();
+
+  // Небольшая пауза перед следующим циклом
+  delay(50);
+  
 }
 
 void loop() {
@@ -99,9 +120,11 @@ void loop() {
 
   //smooth_running_rainbow();
 
-  breath();
+  //breath();
+
+  //paint_the_tape_in();
   
-  //fire();
+  fire();
   
 
 }
