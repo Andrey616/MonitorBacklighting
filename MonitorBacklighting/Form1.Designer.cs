@@ -44,7 +44,6 @@
             this.labelGreen = new System.Windows.Forms.Label();
             this.labelBlue = new System.Windows.Forms.Label();
             this.ColorBox = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Mode0 = new System.Windows.Forms.RadioButton();
             this.Mode1 = new System.Windows.Forms.RadioButton();
             this.Mode3 = new System.Windows.Forms.RadioButton();
@@ -74,6 +73,7 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
+            this.Push = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBlue)).BeginInit();
@@ -145,8 +145,10 @@
             // 
             this.Futor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Futor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Futor.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.Futor.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Futor.ForeColor = System.Drawing.Color.White;
-            this.Futor.Location = new System.Drawing.Point(0, 429);
+            this.Futor.Location = new System.Drawing.Point(0, 436);
             this.Futor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Futor.Name = "Futor";
             this.Futor.Size = new System.Drawing.Size(828, 13);
@@ -165,6 +167,7 @@
             this.trackBarRed.TabIndex = 6;
             this.trackBarRed.TickFrequency = 0;
             this.trackBarRed.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarRed.Value = 255;
             this.trackBarRed.Scroll += new System.EventHandler(this.trackBarRed_Scroll);
             // 
             // trackBarGreen
@@ -179,6 +182,7 @@
             this.trackBarGreen.TabIndex = 7;
             this.trackBarGreen.TickFrequency = 0;
             this.trackBarGreen.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarGreen.Value = 255;
             this.trackBarGreen.Scroll += new System.EventHandler(this.trackBarGreen_Scroll);
             // 
             // trackBarBlue
@@ -193,6 +197,7 @@
             this.trackBarBlue.TabIndex = 8;
             this.trackBarBlue.TickFrequency = 0;
             this.trackBarBlue.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarBlue.Value = 255;
             this.trackBarBlue.Scroll += new System.EventHandler(this.trackBarBlue_Scroll);
             // 
             // label1
@@ -231,61 +236,47 @@
             // 
             // labelRed
             // 
-            this.labelRed.AutoSize = true;
             this.labelRed.ForeColor = System.Drawing.Color.White;
-            this.labelRed.Location = new System.Drawing.Point(238, 185);
+            this.labelRed.Location = new System.Drawing.Point(242, 187);
             this.labelRed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRed.Name = "labelRed";
-            this.labelRed.Size = new System.Drawing.Size(13, 13);
+            this.labelRed.Size = new System.Drawing.Size(27, 13);
             this.labelRed.TabIndex = 12;
-            this.labelRed.Text = "0";
+            this.labelRed.Text = "255";
+            this.labelRed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelGreen
             // 
-            this.labelGreen.AutoSize = true;
             this.labelGreen.ForeColor = System.Drawing.Color.White;
-            this.labelGreen.Location = new System.Drawing.Point(264, 185);
+            this.labelGreen.Location = new System.Drawing.Point(268, 187);
             this.labelGreen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGreen.Name = "labelGreen";
-            this.labelGreen.Size = new System.Drawing.Size(13, 13);
+            this.labelGreen.Size = new System.Drawing.Size(27, 13);
             this.labelGreen.TabIndex = 13;
-            this.labelGreen.Text = "0";
+            this.labelGreen.Text = "255";
+            this.labelGreen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelBlue
             // 
-            this.labelBlue.AutoSize = true;
             this.labelBlue.ForeColor = System.Drawing.Color.White;
-            this.labelBlue.Location = new System.Drawing.Point(288, 185);
+            this.labelBlue.Location = new System.Drawing.Point(292, 187);
             this.labelBlue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBlue.Name = "labelBlue";
-            this.labelBlue.Size = new System.Drawing.Size(13, 13);
+            this.labelBlue.Size = new System.Drawing.Size(28, 13);
             this.labelBlue.TabIndex = 14;
-            this.labelBlue.Text = "0";
+            this.labelBlue.Text = "255э";
+            this.labelBlue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ColorBox
             // 
-            this.ColorBox.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ColorBox.BackColor = System.Drawing.Color.White;
             this.ColorBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorBox.Location = new System.Drawing.Point(240, 107);
             this.ColorBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ColorBox.Name = "ColorBox";
-            this.ColorBox.Size = new System.Drawing.Size(74, 78);
+            this.ColorBox.Size = new System.Drawing.Size(80, 80);
             this.ColorBox.TabIndex = 15;
             this.ColorBox.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(530, 237);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(132, 17);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.Text = "Реагировать на звук";
-            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // Mode0
             // 
@@ -386,7 +377,7 @@
             this.trackSpeedMode.TabIndex = 24;
             this.trackSpeedMode.TickFrequency = 0;
             this.trackSpeedMode.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackSpeedMode.Value = 4;
+            this.trackSpeedMode.Value = 100;
             this.trackSpeedMode.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // SpeedModeLable
@@ -645,7 +636,7 @@
             this.labelBrightness.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelBrightness.Size = new System.Drawing.Size(174, 21);
             this.labelBrightness.TabIndex = 40;
-            this.labelBrightness.Text = "Яркость режимов: 50";
+            this.labelBrightness.Text = "Яркость режимов: 5";
             this.labelBrightness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelBrightness.UseWaitCursor = true;
             // 
@@ -655,14 +646,27 @@
             this.trackBrightness.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.trackBrightness.Location = new System.Drawing.Point(530, 321);
             this.trackBrightness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.trackBrightness.Maximum = 100;
             this.trackBrightness.Name = "trackBrightness";
             this.trackBrightness.Size = new System.Drawing.Size(240, 45);
             this.trackBrightness.TabIndex = 39;
             this.trackBrightness.TickFrequency = 0;
             this.trackBrightness.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBrightness.Value = 50;
+            this.trackBrightness.Value = 5;
             this.trackBrightness.Scroll += new System.EventHandler(this.trackBar1_Scroll_1);
+            // 
+            // Push
+            // 
+            this.Push.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Push.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Push.ForeColor = System.Drawing.Color.White;
+            this.Push.Location = new System.Drawing.Point(318, 363);
+            this.Push.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Push.Name = "Push";
+            this.Push.Size = new System.Drawing.Size(168, 47);
+            this.Push.TabIndex = 41;
+            this.Push.Text = "Подтвердить конфигурацию";
+            this.Push.UseVisualStyleBackColor = false;
+            this.Push.Click += new System.EventHandler(this.Push_Click);
             // 
             // Form1
             // 
@@ -670,6 +674,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(828, 449);
+            this.Controls.Add(this.Push);
             this.Controls.Add(this.labelBrightness);
             this.Controls.Add(this.trackBrightness);
             this.Controls.Add(this.checkBox2);
@@ -677,7 +682,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SpeedModeLable);
             this.Controls.Add(this.trackSpeedMode);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.ColorBox);
             this.Controls.Add(this.labelBlue);
             this.Controls.Add(this.labelGreen);
@@ -693,12 +697,11 @@
             this.Controls.Add(this.butClose);
             this.Controls.Add(this.butOpen);
             this.Controls.Add(this.PortBox);
-            this.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Выберите порт";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarGreen)).EndInit();
@@ -730,7 +733,6 @@
         private System.Windows.Forms.Label labelGreen;
         private System.Windows.Forms.Label labelBlue;
         private System.Windows.Forms.Button ColorBox;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.RadioButton Mode0;
         private System.Windows.Forms.RadioButton Mode1;
         private System.Windows.Forms.RadioButton Mode3;
@@ -760,6 +762,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
+        private System.Windows.Forms.Button Push;
     }
 }
 

@@ -22,11 +22,13 @@ namespace MonitorBacklighting
         public Form1()
         {
             InitializeComponent();
+
         }
 
         public string selectedPort;
         public string portName;
         public SerialPort serialPort;
+        int keyOpen = 0;
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -38,8 +40,6 @@ namespace MonitorBacklighting
             {
                 PortBox.Items.Add(port);
             }
-
-           
 
 
         }
@@ -62,6 +62,8 @@ namespace MonitorBacklighting
                     serialPort = new SerialPort(portName, 9600);
                     Futor.Text = ("Открыт порт: " + selectedPort);
                     serialPort.Open();
+                    keyOpen = 1;
+                    
                     
 
                 }
@@ -86,9 +88,11 @@ namespace MonitorBacklighting
             {
                 butOpen.Enabled = true;
                 serialPort.Close();
+                keyOpen = 0;
                 Futor.Text = ("Закрыт порт: " + selectedPort);
             }
         }
+        
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -190,6 +194,14 @@ namespace MonitorBacklighting
         private void SpeedModeLable_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Push_Click(object sender, EventArgs e)
+        {
+            if (keyOpen == 1)
+            {
+                Futor.Text = "1|100|100";
+            }
         }
     }
 }
