@@ -376,7 +376,7 @@
             this.trackSpeedMode.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.trackSpeedMode.Location = new System.Drawing.Point(552, 260);
             this.trackSpeedMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.trackSpeedMode.Maximum = 250;
+            this.trackSpeedMode.Maximum = 100;
             this.trackSpeedMode.Name = "trackSpeedMode";
             this.trackSpeedMode.Size = new System.Drawing.Size(240, 45);
             this.trackSpeedMode.TabIndex = 24;
@@ -387,6 +387,7 @@
             // 
             // SpeedModeLable
             // 
+            this.SpeedModeLable.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.SpeedModeLable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SpeedModeLable.ForeColor = System.Drawing.Color.White;
             this.SpeedModeLable.Location = new System.Drawing.Point(584, 286);
@@ -656,9 +657,11 @@
             this.checkBoxColor.TabIndex = 38;
             this.checkBoxColor.Text = "Использовать свой цвет";
             this.checkBoxColor.UseVisualStyleBackColor = false;
+            this.checkBoxColor.CheckedChanged += new System.EventHandler(this.checkBoxColor_CheckedChanged);
             // 
             // labelBrightness
             // 
+            this.labelBrightness.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.labelBrightness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelBrightness.ForeColor = System.Drawing.Color.White;
             this.labelBrightness.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -683,7 +686,7 @@
             this.trackBrightness.TabIndex = 39;
             this.trackBrightness.TickFrequency = 0;
             this.trackBrightness.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.trackBrightness.Value = 5;
+            this.trackBrightness.Value = 1;
             this.trackBrightness.Scroll += new System.EventHandler(this.trackBar1_Scroll_1);
             // 
             // Push
