@@ -32,6 +32,7 @@ namespace MonitorBacklighting
         int mode = 0;
         int colorPalette = 0;
         int OnOff = 0;
+        int ColorTop = 0;
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -261,11 +262,11 @@ namespace MonitorBacklighting
                     case 4:
                         if (checkBoxColor.Checked)
                         {
-                            Futor.Text = $"|{OnOff}|4|{trackSpeedMode.Value}|{trackBrightness.Value}|{trackBarRed.Value}|{trackBarGreen.Value}|{trackBarBlue.Value}|";
+                            Futor.Text = $"|{OnOff}|4|{trackSpeedMode.Value}|{trackBrightness.Value}|{trackBarRed.Value}|{trackBarGreen.Value}|{trackBarBlue.Value}|{ColorTop}|";
                         }
                         else
                         {
-                            Futor.Text = $"|{OnOff}|4|{trackSpeedMode.Value}|{trackBrightness.Value}|{ColorPaletteList[colorPalette]}|";
+                            Futor.Text = $"|{OnOff}|4|{trackSpeedMode.Value}|{trackBrightness.Value}|{ColorPaletteList[colorPalette]}|{ColorTop}|";
                         }
 
                         break; 
@@ -345,6 +346,21 @@ namespace MonitorBacklighting
         private void ColorPalePink_CheckedChanged(object sender, EventArgs e)
         {
             colorPalette = 13;
+        }
+
+        private void radioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            ColorTop = 0;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            ColorTop = 1;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            ColorTop = 2;
         }
     }
 }

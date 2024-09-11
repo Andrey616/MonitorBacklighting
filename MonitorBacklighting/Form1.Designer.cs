@@ -74,6 +74,10 @@
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
             this.Push = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarBlue)).BeginInit();
@@ -81,6 +85,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBrightness)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // PortBox
@@ -237,7 +242,7 @@
             // labelRed
             // 
             this.labelRed.ForeColor = System.Drawing.Color.White;
-            this.labelRed.Location = new System.Drawing.Point(242, 187);
+            this.labelRed.Location = new System.Drawing.Point(377, 187);
             this.labelRed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRed.Name = "labelRed";
             this.labelRed.Size = new System.Drawing.Size(27, 13);
@@ -248,7 +253,7 @@
             // labelGreen
             // 
             this.labelGreen.ForeColor = System.Drawing.Color.White;
-            this.labelGreen.Location = new System.Drawing.Point(268, 187);
+            this.labelGreen.Location = new System.Drawing.Point(403, 187);
             this.labelGreen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGreen.Name = "labelGreen";
             this.labelGreen.Size = new System.Drawing.Size(27, 13);
@@ -259,7 +264,7 @@
             // labelBlue
             // 
             this.labelBlue.ForeColor = System.Drawing.Color.White;
-            this.labelBlue.Location = new System.Drawing.Point(292, 187);
+            this.labelBlue.Location = new System.Drawing.Point(427, 187);
             this.labelBlue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBlue.Name = "labelBlue";
             this.labelBlue.Size = new System.Drawing.Size(28, 13);
@@ -271,7 +276,7 @@
             // 
             this.ColorBox.BackColor = System.Drawing.Color.White;
             this.ColorBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColorBox.Location = new System.Drawing.Point(240, 107);
+            this.ColorBox.Location = new System.Drawing.Point(375, 107);
             this.ColorBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ColorBox.Name = "ColorBox";
             this.ColorBox.Size = new System.Drawing.Size(80, 80);
@@ -360,7 +365,7 @@
             this.Mode5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Mode5.Size = new System.Drawing.Size(240, 26);
             this.Mode5.TabIndex = 23;
-            this.Mode5.Text = "Дым";
+            this.Mode5.Text = "Огонь";
             this.Mode5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Mode5.UseVisualStyleBackColor = false;
             this.Mode5.CheckedChanged += new System.EventHandler(this.Mode5_CheckedChanged);
@@ -369,7 +374,7 @@
             // 
             this.trackSpeedMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.trackSpeedMode.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.trackSpeedMode.Location = new System.Drawing.Point(530, 260);
+            this.trackSpeedMode.Location = new System.Drawing.Point(552, 260);
             this.trackSpeedMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.trackSpeedMode.Maximum = 250;
             this.trackSpeedMode.Name = "trackSpeedMode";
@@ -384,7 +389,7 @@
             // 
             this.SpeedModeLable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SpeedModeLable.ForeColor = System.Drawing.Color.White;
-            this.SpeedModeLable.Location = new System.Drawing.Point(562, 286);
+            this.SpeedModeLable.Location = new System.Drawing.Point(584, 286);
             this.SpeedModeLable.Margin = new System.Windows.Forms.Padding(0);
             this.SpeedModeLable.Name = "SpeedModeLable";
             this.SpeedModeLable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -403,11 +408,11 @@
             this.groupBox1.Controls.Add(this.Mode1);
             this.groupBox1.Controls.Add(this.Mode0);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(529, 53);
+            this.groupBox1.Location = new System.Drawing.Point(551, 49);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.groupBox1.Size = new System.Drawing.Size(262, 182);
+            this.groupBox1.Size = new System.Drawing.Size(262, 186);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Режимы свечения:";
@@ -418,6 +423,7 @@
             this.ColorRed.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorRed.BackColor = System.Drawing.Color.Red;
             this.ColorRed.Checked = true;
+            this.ColorRed.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorRed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorRed.Location = new System.Drawing.Point(10, 23);
             this.ColorRed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -432,6 +438,7 @@
             // 
             this.ColorCyan.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorCyan.BackColor = System.Drawing.Color.Cyan;
+            this.ColorCyan.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorCyan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorCyan.Location = new System.Drawing.Point(34, 23);
             this.ColorCyan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -445,6 +452,7 @@
             // 
             this.ColorLime.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorLime.BackColor = System.Drawing.Color.Lime;
+            this.ColorLime.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorLime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorLime.Location = new System.Drawing.Point(60, 23);
             this.ColorLime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -458,7 +466,7 @@
             // 
             this.ColorMagenta.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorMagenta.BackColor = System.Drawing.Color.Magenta;
-            this.ColorMagenta.Cursor = System.Windows.Forms.Cursors.No;
+            this.ColorMagenta.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorMagenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorMagenta.Location = new System.Drawing.Point(86, 23);
             this.ColorMagenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -472,6 +480,7 @@
             // 
             this.ColorYellow.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorYellow.BackColor = System.Drawing.Color.Yellow;
+            this.ColorYellow.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorYellow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorYellow.Location = new System.Drawing.Point(110, 23);
             this.ColorYellow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -485,6 +494,7 @@
             // 
             this.ColorDarkPink.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorDarkPink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(0)))), ((int)(((byte)(127)))));
+            this.ColorDarkPink.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorDarkPink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorDarkPink.Location = new System.Drawing.Point(10, 49);
             this.ColorDarkPink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -498,6 +508,7 @@
             // 
             this.ColorDarkCany.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorDarkCany.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(167)))), ((int)(((byte)(224)))));
+            this.ColorDarkCany.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorDarkCany.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorDarkCany.Location = new System.Drawing.Point(34, 49);
             this.ColorDarkCany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -511,6 +522,7 @@
             // 
             this.ColorDarkMagenta.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorDarkMagenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(25)))), ((int)(((byte)(134)))));
+            this.ColorDarkMagenta.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorDarkMagenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorDarkMagenta.Location = new System.Drawing.Point(60, 49);
             this.ColorDarkMagenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -524,6 +536,7 @@
             // 
             this.ColorWhite.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorWhite.BackColor = System.Drawing.Color.White;
+            this.ColorWhite.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorWhite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorWhite.Location = new System.Drawing.Point(86, 49);
             this.ColorWhite.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -537,6 +550,7 @@
             // 
             this.ColorSwamp.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorSwamp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(179)))), ((int)(((byte)(36)))));
+            this.ColorSwamp.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorSwamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorSwamp.Location = new System.Drawing.Point(110, 49);
             this.ColorSwamp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -576,6 +590,7 @@
             // 
             this.ColorPalePink.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorPalePink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(113)))), ((int)(((byte)(174)))));
+            this.ColorPalePink.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorPalePink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorPalePink.Location = new System.Drawing.Point(166, 49);
             this.ColorPalePink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -589,6 +604,7 @@
             // 
             this.ColorWhiteOrange.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorWhiteOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(156)))), ((int)(((byte)(51)))));
+            this.ColorWhiteOrange.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorWhiteOrange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorWhiteOrange.Location = new System.Drawing.Point(138, 49);
             this.ColorWhiteOrange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -602,6 +618,7 @@
             // 
             this.ColorBlue.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorBlue.BackColor = System.Drawing.Color.Blue;
+            this.ColorBlue.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorBlue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorBlue.Location = new System.Drawing.Point(166, 23);
             this.ColorBlue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -615,6 +632,7 @@
             // 
             this.ColorOrange.Appearance = System.Windows.Forms.Appearance.Button;
             this.ColorOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(80)))), ((int)(((byte)(0)))));
+            this.ColorOrange.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.ColorOrange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ColorOrange.Location = new System.Drawing.Point(138, 23);
             this.ColorOrange.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -631,7 +649,7 @@
             this.checkBoxColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.checkBoxColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxColor.ForeColor = System.Drawing.Color.White;
-            this.checkBoxColor.Location = new System.Drawing.Point(218, 221);
+            this.checkBoxColor.Location = new System.Drawing.Point(342, 221);
             this.checkBoxColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.checkBoxColor.Name = "checkBoxColor";
             this.checkBoxColor.Size = new System.Drawing.Size(143, 23);
@@ -644,7 +662,7 @@
             this.labelBrightness.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelBrightness.ForeColor = System.Drawing.Color.White;
             this.labelBrightness.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelBrightness.Location = new System.Drawing.Point(555, 347);
+            this.labelBrightness.Location = new System.Drawing.Point(577, 347);
             this.labelBrightness.Margin = new System.Windows.Forms.Padding(0);
             this.labelBrightness.Name = "labelBrightness";
             this.labelBrightness.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -658,7 +676,7 @@
             // 
             this.trackBrightness.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.trackBrightness.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.trackBrightness.Location = new System.Drawing.Point(530, 321);
+            this.trackBrightness.Location = new System.Drawing.Point(552, 321);
             this.trackBrightness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.trackBrightness.Name = "trackBrightness";
             this.trackBrightness.Size = new System.Drawing.Size(240, 45);
@@ -673,7 +691,7 @@
             this.Push.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Push.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Push.ForeColor = System.Drawing.Color.White;
-            this.Push.Location = new System.Drawing.Point(318, 363);
+            this.Push.Location = new System.Drawing.Point(331, 363);
             this.Push.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Push.Name = "Push";
             this.Push.Size = new System.Drawing.Size(168, 47);
@@ -682,12 +700,70 @@
             this.Push.UseVisualStyleBackColor = false;
             this.Push.Click += new System.EventHandler(this.Push_Click);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.radioButton1.Checked = true;
+            this.radioButton1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.radioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(24, 24);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(25, 25);
+            this.radioButton1.TabIndex = 42;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "  ";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged_1);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton2.Location = new System.Drawing.Point(24, 76);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(25, 25);
+            this.radioButton2.TabIndex = 43;
+            this.radioButton2.Text = "  ";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButton3.Location = new System.Drawing.Point(24, 128);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(25, 25);
+            this.radioButton3.TabIndex = 44;
+            this.radioButton3.Text = "  ";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton3);
+            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.Location = new System.Drawing.Point(209, 91);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(72, 166);
+            this.groupBox3.TabIndex = 45;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Основной";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(828, 449);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.Push);
             this.Controls.Add(this.labelBrightness);
             this.Controls.Add(this.trackBrightness);
@@ -724,6 +800,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBrightness)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -777,6 +855,10 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
         private System.Windows.Forms.Button Push;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 

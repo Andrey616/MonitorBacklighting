@@ -21,7 +21,7 @@ void setup() {
   pinMode(RELAY_IN, OUTPUT);
   Serial.begin(9600);
   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
-  //FastLED.setBrightness(255);
+  
 
 }
 
@@ -88,8 +88,7 @@ void paint_the_tape_in(){  // покарсить всё в один цыет
 void fire() {
    
   // Имитация горения огня
-  for (int i = 0; i < NUM_LEDS; i++) {
-    // Случайный выбор цвета от оранжевого до красного
+  for (int i = 0; i < NUM_LEDS; i++) { // 255 255 основной 128 его вспышка 20 добавочный, при обрабртки  получаем ргб и приоритетный цвет от 0 до 1
     int r = random(255, 255);
     int g = random(0, 0);
     int b = random(0, 128);
@@ -97,12 +96,14 @@ void fire() {
   }
 
   // Случайные изменения яркости светодиодов
-  for (int i = 0; i < NUM_LEDS; i++) {
+  for (int i = 1; i < NUM_LEDS; i++) {
     int brightness = random(80, 150);
     
     leds[i].nscale8(brightness);
+    
+    
   }
-
+  FastLED.setBrightness(255);
   // Отображение обновленной ленты
   FastLED.show();
 
@@ -112,9 +113,9 @@ void fire() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // принимаю: включение ленты, режим, скорость, яркость,
 
-  digitalWrite(RELAY_IN, 1);
+  digitalWrite(RELAY_IN, 1); // Включение ленты
 
   //smooth_rainbow();
 
