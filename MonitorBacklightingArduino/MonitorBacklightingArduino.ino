@@ -148,7 +148,6 @@ void readData(){
       GParser data(str, '|');
       int ints[10];
 
-      
       int am = data.parseInts(ints);
       
       tapeWhite = ints[0];
