@@ -7,6 +7,7 @@ using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -122,24 +123,35 @@ namespace MonitorBacklighting
 
         private void trackBarRed_Scroll(object sender, EventArgs e)
         {
+            if (checkBoxColor.Checked)
+            {
+                main();
+            }
             //BackColor = Color.FromArgb(250,25,25);
             labelRed.Text = $"{trackBarRed.Value}";
             ColorBox.BackColor = System.Drawing.Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
-            main();
+            
         }
 
         private void trackBarGreen_Scroll(object sender, EventArgs e)
         {
+            if (checkBoxColor.Checked)
+            {
+                main();
+            }
             labelGreen.Text = $"{trackBarGreen.Value}";
             ColorBox.BackColor = System.Drawing.Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
-            main();
+            
         }
 
         private void trackBarBlue_Scroll(object sender, EventArgs e)
         {
+            if (checkBoxColor.Checked)
+            {
+                main();
+            }
             labelBlue.Text = $"{trackBarBlue.Value}";
             ColorBox.BackColor = System.Drawing.Color.FromArgb(trackBarRed.Value, trackBarGreen.Value, trackBarBlue.Value);
-            main();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -227,6 +239,7 @@ namespace MonitorBacklighting
 
         private void main()
         {
+            Thread.Sleep(100);
             if (keyOpen == 1)
             {                
 

@@ -23,6 +23,9 @@ int R = 255;
 int G = 0;
 int B = 255;
 int CollorTop = 0;
+int RTop = 0;
+int GTop = 0;
+int BTop = 0;
 
 int tapeWhite = 0;
 
@@ -108,12 +111,23 @@ void paint_the_tape_in(){  // покарсить всё в один цыет
 }
 
 void fire() { // Имитация горения огня
+  switch (CollorTop) {
+  case 0:
+    RTop = R;
+    break;
+  case 1:
+    GTop = G;
+    break;
+  case 3:
+    BTop = B;
+    break;
+  }
   if (millis() - time > 100){ 
     time = millis();
     for (int i = 0; i < NUM_LEDS; i++) { // 255 255 основной 128 его вспышка 20 добавочный, при обрабртки  получаем ргб и приоритетный цвет от 0 до 1
-      int r = random(255, 255);
-      int g = random(0, 0);
-      int b = random(0, 128);
+      int r = random(RTop, R);
+      int g = random(GTop, G);
+      int b = random(BTop, B);
       leds[i] = CRGB(r, g, b);
     }
 
@@ -137,7 +151,7 @@ void tapeOff(){
 }
 
 void readData(){
-  if (millis() - timeRead > 0){ 
+  if (millis() - timeRead > 10){ 
     timeRead = millis();
     if (Serial.available() > 0) {
       //data = Serial.readStringUntil('\n');
@@ -160,9 +174,10 @@ void readData(){
       CollorTop = ints[7];
       //0|4|100|5|255|0|0|0
       //включение ленты | режим | скорость | яркость | красный | зелёный | синий | приоритетный
-      for (int i = 0; i < am; i++ ){
-        Serial.println(ints[i]);
-      }
+      // for (int i = 0; i < am; i++ ){
+      //   Serial.println(ints[i]);
+      // }
+      
       
 
       //Serial.println(data + data);

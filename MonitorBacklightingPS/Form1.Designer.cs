@@ -670,7 +670,7 @@
             this.labelBrightness.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelBrightness.Size = new System.Drawing.Size(174, 21);
             this.labelBrightness.TabIndex = 40;
-            this.labelBrightness.Text = "Яркость режима: 5";
+            this.labelBrightness.Text = "Яркость режима: 1";
             this.labelBrightness.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelBrightness.UseWaitCursor = true;
             // 
@@ -680,6 +680,7 @@
             this.trackBrightness.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.trackBrightness.Location = new System.Drawing.Point(552, 321);
             this.trackBrightness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.trackBrightness.Minimum = 1;
             this.trackBrightness.Name = "trackBrightness";
             this.trackBrightness.Size = new System.Drawing.Size(240, 45);
             this.trackBrightness.TabIndex = 39;
