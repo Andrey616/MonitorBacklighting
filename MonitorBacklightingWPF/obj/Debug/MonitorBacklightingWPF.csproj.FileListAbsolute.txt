@@ -1,0 +1,15 @@
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\bin\Debug\MonitorBacklightingWPF.exe.config
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\bin\Debug\MonitorBacklightingWPF.exe
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\bin\Debug\MonitorBacklightingWPF.pdb
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.csproj.AssemblyReference.cache
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MainWindow.g.cs
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\App.g.cs
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF_MarkupCompile.cache
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF_MarkupCompile.lref
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MainWindow.baml
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.g.resources
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.Properties.Resources.resources
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.csproj.GenerateResource.cache
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.csproj.CoreCompileInputs.cache
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.exe
+C:\Users\andrey\Desktop\MonitorBacklighting\MonitorBacklighting\MonitorBacklightingWPF\obj\Debug\MonitorBacklightingWPF.pdb
