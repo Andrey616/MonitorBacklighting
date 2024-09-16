@@ -74,7 +74,6 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker4 = new System.ComponentModel.BackgroundWorker();
-            this.Push = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -690,20 +689,6 @@
             this.trackBrightness.Value = 1;
             this.trackBrightness.Scroll += new System.EventHandler(this.trackBar1_Scroll_1);
             // 
-            // Push
-            // 
-            this.Push.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Push.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Push.ForeColor = System.Drawing.Color.White;
-            this.Push.Location = new System.Drawing.Point(331, 363);
-            this.Push.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Push.Name = "Push";
-            this.Push.Size = new System.Drawing.Size(168, 47);
-            this.Push.TabIndex = 41;
-            this.Push.Text = "Подтвердить конфигурацию";
-            this.Push.UseVisualStyleBackColor = false;
-            this.Push.Click += new System.EventHandler(this.Push_Click);
-            // 
             // radioButton1
             // 
             this.radioButton1.Appearance = System.Windows.Forms.Appearance.Button;
@@ -768,7 +753,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(828, 449);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.Push);
             this.Controls.Add(this.labelBrightness);
             this.Controls.Add(this.trackBrightness);
             this.Controls.Add(this.checkBoxColor);
@@ -860,7 +844,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
         private System.ComponentModel.BackgroundWorker backgroundWorker4;
-        private System.Windows.Forms.Button Push;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;

@@ -19,9 +19,9 @@ int mode = 3;
 int hell = 100;
 int speed = 100;
 
-int R = 255;
+int R = 0;
 int G = 0;
-int B = 255;
+int B = 0;
 int CollorTop = 0;
 int RTop = 0;
 int GTop = 0;
@@ -114,12 +114,18 @@ void fire() { // Имитация горения огня
   switch (CollorTop) {
   case 0:
     RTop = R;
+    GTop = 0;
+    GTop = 0;
     break;
   case 1:
     GTop = G;
+    RTop = 0;
+    BTop = 0;
     break;
   case 2:
     BTop = B;
+    RTop = 0;
+    GTop = 0;
     break;
   }
   if (millis() - time > 100){ 
