@@ -118,7 +118,7 @@ void fire() { // Имитация горения огня
   case 1:
     GTop = G;
     break;
-  case 3:
+  case 2:
     BTop = B;
     break;
   }
